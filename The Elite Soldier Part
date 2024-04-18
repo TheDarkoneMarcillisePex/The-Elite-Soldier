@@ -1,4 +1,6 @@
+local char = game.Players.LocalPlayer.Character
 workspace.resources.RemoteEvent:FireServer("becomeHostile") 
+char:WaitForChild("Punch"):Destroy()
 local args = {
     [1] = "FireOtherClients",
     [2] = "displayChoice",
