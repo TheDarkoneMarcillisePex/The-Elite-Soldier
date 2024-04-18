@@ -1,9 +1,16 @@
+local plr = game.Players.LocalPlayer
 local char = game.Players.LocalPlayer.Character
 workspace.resources.RemoteEvent:FireServer("becomeHostile") 
 wait(0.5)
 if char:FindFirstChild("Punch") then
 char.Punch:Destroy()
 end
+if plr.Backpack:FindFirstChild("Punch") then
+plr.Backpack.Punch:Destroy()
+end
+
+
+
 local args = {
     [1] = "FireOtherClients",
     [2] = "displayChoice",
