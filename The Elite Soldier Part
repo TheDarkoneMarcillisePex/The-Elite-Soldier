@@ -1,0 +1,45 @@
+workspace.resources.RemoteEvent:FireServer("becomeHostile") 
+local args = {
+    [1] = "FireOtherClients",
+    [2] = "displayChoice",
+    [3] = "CustomNotification",
+    [4] = "A Elite Darkone Soldier Has Powered Up"
+}
+
+workspace.resources.RemoteEvent:FireServer(unpack(args))
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/TheDarkoneMarcillisePex/The-Elite-Soldier/main/The%20Elite%20Soldier%20Script'))()
+local plr = game.Players.LocalPlayer
+local char = plr.Character
+char.Humanoid.Died:Connect(function()
+
+local args = {
+        [1] = "reloadMe"
+    }
+    
+    workspace.resources.RemoteEvent:FireServer(unpack(args))
+
+
+
+end)
+
+plr.CharacterAdded:Connect(function()
+local char = plr.Character
+char:WaitForChild("HumanoidRootPart")
+workspace.resources.RemoteEvent:FireServer("becomeHostile") 
+loadstring(game:HttpGet('https://raw.githubusercontent.com/TheDarkoneMarcillisePex/The-Elite-Soldier/main/The%20Elite%20Soldier%20Script'))()
+char.Humanoid.Died:Connect(function()
+
+
+local args = {
+        [1] = "reloadMe"
+    }
+    
+    workspace.resources.RemoteEvent:FireServer(unpack(args))
+
+
+end)
+
+
+
+end)
