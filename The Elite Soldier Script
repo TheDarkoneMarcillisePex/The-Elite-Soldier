@@ -1,14 +1,4 @@
-workspace.resources.RemoteEvent:FireServer("becomeHostile") 
 
-
-local args = {
-    [1] = "FireOtherClients",
-    [2] = "displayChoice",
-    [3] = "CustomNotification",
-    [4] = "A Elite Darkone Soldier Has Powered Up"
-}
-
-workspace.resources.RemoteEvent:FireServer(unpack(args))
 
 
 
