@@ -31,6 +31,7 @@ workspace.Heed:Destroy()
 end
 wait()
 workspace.resources.RemoteEvent:FireServer("becomeHostile") 
+char:WaitForChild("Punch"):Destroy()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/TheDarkoneMarcillisePex/The-Elite-Soldier/main/The%20Elite%20Soldier%20Script'))()
 char.Humanoid.Died:Connect(function()
 
