@@ -26,6 +26,10 @@ end)
 plr.CharacterAdded:Connect(function()
 local char = plr.Character
 char:WaitForChild("HumanoidRootPart")
+if workspace:FindFirstChild("Heed") then
+workspace.Heed:Destroy()
+end
+wait()
 workspace.resources.RemoteEvent:FireServer("becomeHostile") 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/TheDarkoneMarcillisePex/The-Elite-Soldier/main/The%20Elite%20Soldier%20Script'))()
 char.Humanoid.Died:Connect(function()
